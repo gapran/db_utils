@@ -1,1 +1,1 @@
-# Placeholder file for database format documentation.
+# Placeholder file for database format documentation
