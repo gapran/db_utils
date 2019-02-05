@@ -1,1 +1,13 @@
 language: cpp
+os: linux
+group: stable
+
+install:
+ - sudo apt-get update
+ - sudo apt-get install libqt4-dev qt4-qmake
+
+script:
+ - cd FormatTranslator
+ - qmake -project
+ - qmake FormatTranslator.pro
+ - make
