@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/SQLInjection
+END
+SQLInjection.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/SQLInjection/SQLInjection.jsp
+END
+EditProfile.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/SQLInjection/EditProfile.jsp
+END
+Login.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/SQLInjection/Login.jsp
+END
+error.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/SQLInjection/error.jsp
+END
+SearchStaff.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/SQLInjection/SearchStaff.jsp
+END
+ViewProfile.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/SQLInjection/ViewProfile.jsp
+END
+SQLInjection.css
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/SQLInjection/SQLInjection.css
+END
+ListStaff.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/SQLInjection/ListStaff.jsp
+END

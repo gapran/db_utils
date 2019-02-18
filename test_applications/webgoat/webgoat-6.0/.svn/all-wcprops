@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/492/branches/webgoat-6.0
+END
+pom.xml
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/488/branches/webgoat-6.0/pom.xml
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/492/branches/webgoat-6.0/README.txt
+END
+webgoat for SQL Server.bat
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/483/branches/webgoat-6.0/webgoat%20for%20SQL%20Server.bat
+END
+webgoat_8080.bat
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/490/branches/webgoat-6.0/webgoat_8080.bat
+END
+webgoat.bat
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/483/branches/webgoat-6.0/webgoat.bat
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/484/branches/webgoat-6.0/build.xml
+END
+webscarab.bat
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/483/branches/webgoat-6.0/webscarab.bat
+END
+webgoat.sh
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/483/branches/webgoat-6.0/webgoat.sh
+END

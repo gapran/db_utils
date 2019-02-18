@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/RoleBasedAccessControl
+END
+error.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/RoleBasedAccessControl/error.jsp
+END
+SearchStaff.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/RoleBasedAccessControl/SearchStaff.jsp
+END
+ViewProfile.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/RoleBasedAccessControl/ViewProfile.jsp
+END
+ListStaff.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/RoleBasedAccessControl/ListStaff.jsp
+END
+RoleBasedAccessControl.css
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/RoleBasedAccessControl/RoleBasedAccessControl.css
+END
+RoleBasedAccessControl.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/RoleBasedAccessControl/RoleBasedAccessControl.jsp
+END
+EditProfile.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/RoleBasedAccessControl/EditProfile.jsp
+END
+Login.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/RoleBasedAccessControl/Login.jsp
+END

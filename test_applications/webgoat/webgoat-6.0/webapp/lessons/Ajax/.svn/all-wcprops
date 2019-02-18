@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/Ajax
+END
+eval.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/Ajax/eval.jsp
+END
+clientSideFiltering.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/Ajax/clientSideFiltering.jsp
+END
+clientSideFiltering_backup.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/Ajax/clientSideFiltering_backup.jsp
+END
+sameOrigin.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/Ajax/sameOrigin.jsp
+END
+clientSideValidation.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/Ajax/clientSideValidation.jsp
+END
+employees.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/Ajax/employees.xml
+END

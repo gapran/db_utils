@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/CrossSiteScripting
+END
+error.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/CrossSiteScripting/error.jsp
+END
+SearchStaff.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/CrossSiteScripting/SearchStaff.jsp
+END
+ViewProfile.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/CrossSiteScripting/ViewProfile.jsp
+END
+CrossSiteScripting.css
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/CrossSiteScripting/CrossSiteScripting.css
+END
+ListStaff.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/CrossSiteScripting/ListStaff.jsp
+END
+CrossSiteScripting.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/CrossSiteScripting/CrossSiteScripting.jsp
+END
+EditProfile.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/CrossSiteScripting/EditProfile.jsp
+END
+Login.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/lessons/CrossSiteScripting/Login.jsp
+END

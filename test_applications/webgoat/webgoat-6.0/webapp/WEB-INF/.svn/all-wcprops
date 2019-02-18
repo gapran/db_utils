@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/WEB-INF
+END
+webgoat-lab.properties
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/WEB-INF/webgoat-lab.properties
+END
+tiles-context.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/WEB-INF/tiles-context.xml
+END
+webgoat.properties
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/WEB-INF/webgoat.properties
+END
+spring-security.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/WEB-INF/spring-security.xml
+END
+webgoat-class.properties
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/WEB-INF/webgoat-class.properties
+END
+tiles-definitions.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/WEB-INF/tiles-definitions.xml
+END
+server-config.wsdd
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/WEB-INF/server-config.wsdd
+END
+mvc-dispatcher-servlet.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/WEB-INF/mvc-dispatcher-servlet.xml
+END
+webgoat-owasp.properties
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/WEB-INF/webgoat-owasp.properties
+END
+webgoat_oracle.sql
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/WEB-INF/webgoat_oracle.sql
+END
+webgoat_sqlserver.sql
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/WEB-INF/webgoat_sqlserver.sql
+END
+web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/485/branches/webgoat-6.0/webapp/WEB-INF/web.xml
+END
