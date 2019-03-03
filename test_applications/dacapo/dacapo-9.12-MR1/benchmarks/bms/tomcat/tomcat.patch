@@ -1,0 +1,14 @@
+--- apache-tomcat-9.0.2-src/build.properties.default.orig	2018-03-27 11:56:29.000000000 +1100
++++ apache-tomcat-9.0.2-src/build.properties.default	2018-03-27 11:56:36.000000000 +1100
+@@ -96,9 +96,9 @@
+ base-tomcat.loc.1=${base-apache.loc.1}/tomcat
+ base-tomcat.loc.2=${base-apache.loc.2}/tomcat
+ 
+-base-sf.loc=http://downloads.sourceforge.net
++base-sf.loc=https://downloads.sourceforge.net
+ # repo.maven.apache.org is the same as repo2.maven.org
+-base-maven.loc=http://repo.maven.apache.org/maven2
++base-maven.loc=https://repo.maven.apache.org/maven2
+ 
+ # Mirror, was used when there were problems with the main SF downloads site
+ # base-sf.loc=http://sunet.dl.sourceforge.net

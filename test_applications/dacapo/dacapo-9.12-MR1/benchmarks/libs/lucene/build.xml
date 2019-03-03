@@ -1,0 +1,49 @@
+<!--
+    * Copyright (c) 2009 The Australian National University.
+    * All rights reserved. This program and the accompanying materials
+    * are made available under the terms of the Apache License v2.0.
+    * You may obtain the license at
+    *
+    *    http://www.opensource.org/licenses/apache2.0.php
+-->
+<project name="lucene" default="all" basedir="../..">
+  <description>lucene library, required by lusearch and luindex</description>
+  <property file="ant/dacapo.properties"/>
+
+    <property name="lib-name" value="lucene"/>
+    <property name="lib-major-version" value="7.1"/>
+    <property name="lib-version" value="${lib-major-version}.0"/>
+    <property name="lib-url" value="${apache.dl.url}/lucene/java/${lib-version}"/>
+    <property name="lib-src" value="lucene-${lib-version}-src.tgz"/>
+
+  <import file="../common.xml"/>
+
+  <property name="lib-build-top" value="${lib-build-dir}/lucene-${lib-version}"/>
+
+  <target name="unpack" depends="untar"/>
+
+    <target name="build">
+        <ant antfile="common-build.xml" target="ivy-bootstrap" dir="${lib-build-top}" inheritall="false"/>
+        <typedef uri="antlib:org.apache.ivy.ant" resource="org/apache/ivy/ant/antlib.xml" classpath="${user.home}/.ant/lib/ivy-2.3.0.jar"/>
+        <ant antfile="build.xml" target="jar-core" dir="${lib-build-top}" inheritall="false"/>
+        <ant antfile="build.xml" target="default" dir="${lib-build-top}/demo/" inheritall="false"/>
+    </target>
+
+    <target name="jar">
+        <copy todir="${lib-jars}">
+            <fileset dir="${lib-build-top}/build/core">
+                <include name="lucene-core-*.jar"/>
+            </fileset>
+        </copy>
+        <copy todir="${lib-jars}">
+            <fileset dir="${lib-build-top}/build/demo">
+                <include name="lucene-demo-*.jar"/>
+            </fileset>
+        </copy>
+        <copy todir="${lib-jars}">
+            <fileset dir="${lib-build-top}/build/queryparser/">
+                <include name="lucene-queryparser-*.jar"/>
+            </fileset>
+        </copy>
+    </target>
+</project>
