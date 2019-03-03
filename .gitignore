@@ -80,3 +80,7 @@ compile_commands.json
 # MinGW generated files
 *.Debug
 *.Release
+
+.svn*
+target*
+
