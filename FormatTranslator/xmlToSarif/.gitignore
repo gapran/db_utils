@@ -9,7 +9,7 @@ local.properties
 .DS_STORE
 */target/*
 
-
+.idea
 .metadata
 bin/
 tmp/

@@ -1,4 +1,4 @@
-package xmlToSarif;
+package xmltosarif;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -154,7 +154,7 @@ public class FindBugsParser {
 
 
         try {
-            FileWriter file = new FileWriter("xmlToSarif.json");
+            FileWriter file = new FileWriter("xmltosarif.json");
             file.write(root.toJSONString());
             System.out.println("Successfully Copied JSON Object to File...");
             System.out.println("\nJSON Object: " + root);

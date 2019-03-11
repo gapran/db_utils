@@ -1,4 +1,4 @@
-package xmlToSarif;
+package xmltosarif;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;

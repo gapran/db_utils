@@ -1,4 +1,4 @@
-package xmlToSarif;
+package xmltosarif;
 
 public class SarifModel {
 
