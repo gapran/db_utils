@@ -1,9 +1,13 @@
-public class logicalLocations {
+package xmlToSarif;
 
-    String className;
-    String methodName;
-    String sourceFile;
-    String sourcePath;
+public class SarifModel {
+
+    public String className;
+    public String methodName;
+    public String sourceFile;
+    public String sourcePath;
+    public String message;
+    public String startLine;
 
     public String getMessage() {
         return message;
@@ -20,9 +24,6 @@ public class logicalLocations {
     public void setStartLine(String startLine) {
         this.startLine = startLine;
     }
-
-    String message;
-    String startLine;
 
     public String getSourcePath() {
         return sourcePath;
