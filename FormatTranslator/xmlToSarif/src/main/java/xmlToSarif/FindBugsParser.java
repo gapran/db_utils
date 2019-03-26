@@ -160,7 +160,7 @@ public class FindBugsParser {
             System.out.println("\nJSON Object: " + root);
             file.close();
         }
-        catch(java.io.IOException e)
+        catch(IOException e)
         {
             e.printStackTrace();
         }

@@ -34,13 +34,10 @@ public class SaxHandler extends DefaultHandler
             String startLine = attributes.getValue("start");
             tempLogical.setSourceFile(sourceFile);
             tempLogical.setSourcePath(sourcePath);
-            if(startLine != null)
+            if(startLine != null && !readFirstLine)
             {
-                if(!readFirstLine)
-                {
-                    tempLogical.setStartLine(startLine);
-                    readFirstLine = true;
-                }
+                tempLogical.setStartLine(startLine);
+                readFirstLine = true;
             }
 
         }

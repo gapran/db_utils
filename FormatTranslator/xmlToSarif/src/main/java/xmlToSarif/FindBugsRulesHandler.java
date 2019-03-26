@@ -3,8 +3,6 @@ package xmltosarif;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
-
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class FindBugsRulesHandler extends DefaultHandler
