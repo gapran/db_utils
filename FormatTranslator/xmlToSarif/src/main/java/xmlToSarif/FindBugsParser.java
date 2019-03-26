@@ -2,35 +2,37 @@ package xmltosarif;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
-import java.io.FileInputStream;
-import java.io.FileWriter;
-import java.io.InputStream;
+import java.io.*;
 import java.util.ArrayList;
 
 public class FindBugsParser {
     private SaxHandler handler;
     private String currentNameSpace;
+    private FindBugsRulesHandler rulesHandler;
 
     private void parseXmlFile() {
         SAXParserFactory factory = SAXParserFactory.newInstance();
 
         try {
             InputStream xmlInput = new FileInputStream("findbugs_report_webgoat.xml");
+            InputStream xmlRulesInput = new FileInputStream("rules-findbugs.xml");
 
-            SAXParser saxParser = factory.newSAXParser();
+            SAXParser saxParser1 = factory.newSAXParser();
+            SAXParser saxParser2 = factory.newSAXParser();
             handler = new SaxHandler();
-            saxParser.parse(xmlInput, handler);
+            rulesHandler = new FindBugsRulesHandler();
+            saxParser1.parse(xmlInput, handler);
+            saxParser2.parse(xmlRulesInput, rulesHandler);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
 
-    private String getRuleId(int id) {
-        return "FB" + id;
+    private String getRuleId(String description) {
+        return "de.upb.gpa.findbugs." + description;
     }
 
 
@@ -50,8 +52,7 @@ public class FindBugsParser {
     private void addRules(JSONObject ruleObj, String ruleId, String description) {
         JSONObject ruleIdObj = new JSONObject();
         ruleIdObj.put("id", ruleId);
-        ruleIdObj.put("description", description);
-
+        ruleIdObj.put("description", rulesHandler.rules.get(description).getDescription());
         ruleObj.put(ruleId, ruleIdObj);
     }
 
@@ -88,10 +89,11 @@ public class FindBugsParser {
     }
 
 
+
     private void addResults(JSONArray results, String ruleId, String message, String startLine, String uri) {
         JSONObject resultObj = new JSONObject();
         resultObj.put("ruleId", ruleId);
-        resultObj.put("message", message);
+        resultObj.put("message", rulesHandler.rules.get(message).getMessage());
 
         JSONArray locArray = new JSONArray();
         JSONObject locObj = new JSONObject();
@@ -109,10 +111,7 @@ public class FindBugsParser {
         results.add(resultObj);
     }
 
-
-
-
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         FindBugsParser findBugsParser = new FindBugsParser();
         findBugsParser.parseXmlFile();
 
@@ -136,7 +135,8 @@ public class FindBugsParser {
 
             findBugsParser.addLogicalLocations(logicalLocations, sarifModelArray.get(i).getClassName(), sarifModelArray.get(i).getMethodName());
 
-            String ruleId = findBugsParser.getRuleId(i + 1);
+            String ruleId = findBugsParser.getRuleId(sarifModelArray.get(i).getMessage());
+
             findBugsParser.addRules(ruleObj, ruleId, sarifModelArray.get(i).getMessage());
 
             findBugsParser.addResults(results, ruleId, sarifModelArray.get(i).getMessage(), sarifModelArray.get(i).getStartLine(), sarifModelArray.get(i).getSourcePath());
@@ -154,7 +154,7 @@ public class FindBugsParser {
 
 
         try {
-            FileWriter file = new FileWriter("xmltosarif.json");
+            FileWriter file = new FileWriter("xmltosarif.sarif");
             file.write(root.toJSONString());
             System.out.println("Successfully Copied JSON Object to File...");
             System.out.println("\nJSON Object: " + root);
