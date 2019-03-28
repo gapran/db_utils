@@ -2,6 +2,8 @@
 build-*
 *.d
 
+sarifConversion.iml
+
 # Compiled Object files
 *.slo
 *.lo
