@@ -12,19 +12,24 @@ public class FindBugsParser {
     private String currentNameSpace;
     private FindBugsRulesHandler rulesHandler;
 
-    private void parseXmlFile() {
+
+    public void parseXmlFile() {
         SAXParserFactory factory = SAXParserFactory.newInstance();
 
         try {
             InputStream xmlInput = new FileInputStream("findbugs_report_webgoat.xml");
             InputStream xmlRulesInput = new FileInputStream("rules-findbugs.xml");
 
+
             SAXParser saxParser1 = factory.newSAXParser();
             SAXParser saxParser2 = factory.newSAXParser();
+
             handler = new SaxHandler();
             rulesHandler = new FindBugsRulesHandler();
+
             saxParser1.parse(xmlInput, handler);
             saxParser2.parse(xmlRulesInput, rulesHandler);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -111,22 +116,22 @@ public class FindBugsParser {
         results.add(resultObj);
     }
 
-    public static void main(String[] args) throws IOException {
-        FindBugsParser findBugsParser = new FindBugsParser();
-        findBugsParser.parseXmlFile();
-
+    public String generateFindBugsSarif(FindBugsParser findBugsParser)
+    {
         JSONObject tools = new JSONObject();
         findBugsParser.addTools(tools);
 
         JSONObject files = new JSONObject();
         JSONObject logicalLocations = new JSONObject();
         JSONObject rules = new JSONObject();
+
         JSONObject ruleObj = new JSONObject();
         JSONArray results = new JSONArray();
 
         JSONObject root = new JSONObject();
         JSONArray runs = new JSONArray();
         JSONObject runsObj = new JSONObject();
+
 
         ArrayList<SarifModel> sarifModelArray = findBugsParser.handler.SarifModel;
 
@@ -142,22 +147,28 @@ public class FindBugsParser {
             findBugsParser.addResults(results, ruleId, sarifModelArray.get(i).getMessage(), sarifModelArray.get(i).getStartLine(), sarifModelArray.get(i).getSourcePath());
         }
 
-        rules.put("rules",ruleObj);
         root.put("version", "1.0.0");
         runsObj.put("tool", tools);
         runsObj.put("files", files);
         runsObj.put("logicalLocations", logicalLocations);
         runsObj.put("results", results);
-        runsObj.put("rules", rules);
+        runsObj.put("rules", ruleObj);
         runs.add(runsObj);
         root.put("runs", runs);
 
+        String sarifFindBugsString = root.toString();
 
+        return sarifFindBugsString;
+
+    }
+
+    public void writeDataToFileFindBugs(String data)
+    {
         try {
-            FileWriter file = new FileWriter("xmltosarif.sarif");
-            file.write(root.toJSONString());
+            FileWriter file = new FileWriter("findbugsXmltosarif.sarif");
+            file.write(data);
             System.out.println("Successfully Copied JSON Object to File...");
-            System.out.println("\nJSON Object: " + root);
+            System.out.println("\nJSON Object: " + data);
             file.close();
         }
         catch(IOException e)
@@ -165,4 +176,6 @@ public class FindBugsParser {
             e.printStackTrace();
         }
     }
+
+
 }

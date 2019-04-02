@@ -55,7 +55,6 @@ public class SaxHandler extends DefaultHandler
             SarifModel.add(tempLogical);
             tempLogical = new SarifModel();
             readFirstLine = false;
-            System.out.println(tempLogical.methodName);
         }
 
 
