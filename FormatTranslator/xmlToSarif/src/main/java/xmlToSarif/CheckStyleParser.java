@@ -17,7 +17,7 @@ public class CheckStyleParser
     private String currentNameSpace;
     private final String ruleId = "de.upb.gpa.Checkstyle";
     private int ruleIdExtend = 1;
-    ArrayList<String> tempRules = new ArrayList<String>();
+    private ArrayList<String> tempRules = new ArrayList<String>();
 
     public void parseXmlFile()
     {
@@ -108,39 +108,39 @@ public class CheckStyleParser
             tempRules.add(ruleIdExtend-1,tempMessage);
             ruleIdExtend++ ;
         }
+
         else
+        {
+            for(int i=0;i<tempRules.size();i++)
             {
-                for(int i=0;i<tempRules.size();i++)
+                if(tempMessage.equals(tempRules.get(i)))
                 {
-                    if(tempMessage.equals(tempRules.get(i)))
-                    {
-                        isRule = true;
-                        int j = i+1;
-                        tempruleID = ruleId+"."+j;
-                        break;
-                    }
+                    isRule = true;
+                    int j = i+1;
+                    tempruleID = ruleId+"."+j;
+                    break;
                 }
-
-                if(isRule == true)
-                {
-                    resultObj.put("ruleId", tempruleID);
-                    isRule = false;
-                    ruleIdObj.put("id", tempruleID);
-                    ruleIdObj.put("description", tempMessage);
-                    ruleObj.put(tempruleID, ruleIdObj);
-
-                }
-                else
-                    {
-                        resultObj.put("ruleId", ruleId+"."+ruleIdExtend);
-                        ruleIdObj.put("id", ruleId+"."+ruleIdExtend);
-                        ruleIdObj.put("description", tempMessage);
-                        ruleObj.put(ruleId+"."+ruleIdExtend, ruleIdObj);
-                        tempRules.add(ruleIdExtend-1,tempMessage);
-                        ruleIdExtend++ ;
-
-                    }
             }
+
+            if(isRule == true)
+            {
+                resultObj.put("ruleId", tempruleID);
+                ruleIdObj.put("id", tempruleID);
+                ruleIdObj.put("description", tempMessage);
+                ruleObj.put(tempruleID, ruleIdObj);
+
+            }
+            else
+            {
+                resultObj.put("ruleId", ruleId+"."+ruleIdExtend);
+                ruleIdObj.put("id", ruleId+"."+ruleIdExtend);
+                ruleIdObj.put("description", tempMessage);
+                ruleObj.put(ruleId+"."+ruleIdExtend, ruleIdObj);
+                tempRules.add(ruleIdExtend-1,tempMessage);
+                ruleIdExtend++ ;
+
+            }
+        }
 
 
 
@@ -156,7 +156,6 @@ public class CheckStyleParser
 
         JSONObject files = new JSONObject();
         JSONObject logicalLocations = new JSONObject();
-        JSONObject rules = new JSONObject();
         JSONObject ruleObj = new JSONObject();
         JSONArray results = new JSONArray();
 

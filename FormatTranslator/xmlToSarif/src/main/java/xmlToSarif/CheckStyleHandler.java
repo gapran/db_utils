@@ -12,7 +12,7 @@ public class CheckStyleHandler extends DefaultHandler
     public CheckStyleSarifModel tempSarifModel = new CheckStyleSarifModel();
     public ArrayList<String> messages = new ArrayList<String>();
     public ArrayList<String> startLines = new ArrayList<String>();
-    int i=0;
+    private int i=0;
 
     public void startElement(String uri, String localName,
                              String qName, Attributes attributes) throws SAXException
