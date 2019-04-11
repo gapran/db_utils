@@ -120,7 +120,7 @@ public class CheckStyleParser
                     tempruleID = ruleId+"."+j;
                     break;
                 }
-            }t 
+            }
 
             if(isRule)
             {
