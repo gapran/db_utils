@@ -120,9 +120,9 @@ public class CheckStyleParser
                     tempruleID = ruleId+"."+j;
                     break;
                 }
-            }
+            }t 
 
-            if(isRule == true)
+            if(isRule)
             {
                 resultObj.put("ruleId", tempruleID);
                 ruleIdObj.put("id", tempruleID);
