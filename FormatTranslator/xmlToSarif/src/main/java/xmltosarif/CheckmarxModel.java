@@ -6,6 +6,8 @@ public class CheckmarxModel {
     private String sourceFile;
     private String lineNumber;
     private String methodName;
+    private String message;
+    private String fullDescription;
 
     public String getMessage() {
         return message;
@@ -22,9 +24,6 @@ public class CheckmarxModel {
     public void setFullDescription(String fullDescription) {
         this.fullDescription = fullDescription;
     }
-
-    private String message;
-    private String fullDescription;
 
     public String getSourceFile() {
         return sourceFile;
