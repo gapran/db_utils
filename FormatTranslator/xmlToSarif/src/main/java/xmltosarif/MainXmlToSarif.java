@@ -23,5 +23,9 @@ public class MainXmlToSarif {
         String checkMarxString = checkmarxParser.generateCheckmarxSarif(checkMarxModel, checkmarxParser);
         checkmarxParser.writeDataToFileCheckMarx(checkMarxString);
 
+        ParseWarnings parseWarnings = new ParseWarnings();
+        parseWarnings.parseWarnings();
+
+
     }
 }

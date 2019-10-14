@@ -1,0 +1,1 @@
+{"de.upb.gpa.Checkmarx.66":{"startLine":"78","shortMessage":"Client Potential XSS","longMessage":"PCI DSS (3.2) - 6.5.7 - Cross-site scripting (XSS) A3-Cross-Site Scripting (XSS) Access Control SI-15 Information Output Filtering (P0) A7-Cross-Site Scripting (XSS) "}}

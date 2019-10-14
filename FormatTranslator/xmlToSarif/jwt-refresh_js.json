@@ -1,0 +1,1 @@
+{"de.upb.gpa.Checkmarx.481":{"startLine":"10","shortMessage":"Use Of Hardcoded Password","longMessage":"PCI DSS (3.2) - 6.5.3 - Insecure cryptographic storage  Identification And Authentication SC-28 Protection of Information at Rest (P1) A3-Sensitive Data Exposure "}}
