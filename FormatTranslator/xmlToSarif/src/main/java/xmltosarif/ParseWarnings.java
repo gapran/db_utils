@@ -75,9 +75,11 @@ public class ParseWarnings {
         sarifFiles[0] = "CheckmarxCsvToSarif.sarif";
 
 
+        JSONObject errorFile = new JSONObject();
 
         for(int i =0;i<fileNames.size();i++)
         {
+
 
             JSONObject error = new JSONObject();
             for( int j =0; j<sarifFiles.length;j++)
@@ -137,10 +139,12 @@ public class ParseWarnings {
 
             }
 
+            errorFile.put(fileNames.get(i),error);
+
             try
             {
-                FileWriter file = new FileWriter(fileNames.get(i)+".json");
-                file.write(error.toString());
+                FileWriter file = new FileWriter("Error.json");
+                file.write(errorFile.toString());
                 file.close();
 
             }

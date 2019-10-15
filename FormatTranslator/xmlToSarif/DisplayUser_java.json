@@ -1,1 +1,0 @@
-{"de.upb.gpa.Checkmarx.70":{"startLine":"71","shortMessage":"Use of a One Way Hash without a Salt","longMessage":" A6-Sensitive Data Exposure Media Protection SC-13 Cryptographic Protection (P1) A3-Sensitive Data Exposure "}}
