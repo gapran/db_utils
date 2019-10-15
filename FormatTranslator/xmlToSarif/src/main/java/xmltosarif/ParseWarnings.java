@@ -69,19 +69,18 @@ public class ParseWarnings {
 
     public void parseWarnings(List<String > fileNames) {
 
+        int warningCounter = 1;
+
         String sarifFiles[] = new String[1];
         //sarifFiles[0] = "findbugsXmltosarif.sarif";
         //sarifFiles[1] = "checkStyleXmltosarif.sarif";
         sarifFiles[0] = "CheckmarxCsvToSarif.sarif";
 
 
-        JSONObject errorFile = new JSONObject();
-
-        for(int i =0;i<fileNames.size();i++)
-        {
+        JSONArray errorFile = new JSONArray();
 
 
-            JSONObject error = new JSONObject();
+        JSONObject error = new JSONObject();
             for( int j =0; j<sarifFiles.length;j++)
             {
                 try
@@ -119,16 +118,16 @@ public class ParseWarnings {
                         JSONObject getRuleHandler = (JSONObject) rules.get(ruleId);
                         String longMessage = (String) getRuleHandler.get("description");
 
-                        if(fileNames.get(i).equals(fName))
-                        {
 
                             fileContent.put("startLine",startLine);
                             fileContent.put("shortMessage",message);
                             fileContent.put("longMessage", longMessage);
+                            fileContent.put("ruleId", ruleId);
+                            fileContent.put("fileName", fName);
 
-                            error.put(ruleId,fileContent);
-                        }
+                            errorFile.add(fileContent);
                     }
+
 
                 }
                 catch(Exception e)
@@ -139,7 +138,7 @@ public class ParseWarnings {
 
             }
 
-            errorFile.put(fileNames.get(i),error);
+
 
             try
             {
@@ -158,6 +157,6 @@ public class ParseWarnings {
     }
 
 
-}
+
 
 
