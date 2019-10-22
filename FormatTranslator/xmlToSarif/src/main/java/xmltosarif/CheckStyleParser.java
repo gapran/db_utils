@@ -98,6 +98,14 @@ public class CheckStyleParser
         String tempMessage = "";
         tempMessage = message.replaceAll("\\(.*?\\)","");
 
+        resultObj.put("ruleId", ruleId+"."+ruleIdExtend);
+        ruleIdObj.put("id", ruleId+"."+ruleIdExtend);
+        ruleIdObj.put("description", tempMessage);
+        ruleObj.put(ruleId+"."+ruleIdExtend, ruleIdObj);
+        ruleIdExtend++;
+
+
+        /*
         if(tempRules.size()==0)
         {
 
@@ -140,7 +148,7 @@ public class CheckStyleParser
                 ruleIdExtend++ ;
 
             }
-        }
+        }*/
 
 
 

@@ -36,8 +36,8 @@ public class FindBugsParser {
     }
 
 
-    private String getRuleId(String description) {
-        return "de.upb.gpa.findbugs." + description;
+    private String getRuleId() {
+        return "de.upb.gpa.findbugs." ;//+ description;
     }
 
 
@@ -118,6 +118,7 @@ public class FindBugsParser {
 
     public String generateFindBugsSarif(FindBugsParser findBugsParser)
     {
+        int ruleIdExtend = 1;
         JSONObject tools = new JSONObject();
         findBugsParser.addTools(tools);
 
@@ -135,13 +136,17 @@ public class FindBugsParser {
 
         ArrayList<SarifModel> sarifModelArray = findBugsParser.handler.SarifModel;
 
+
         for (int i = 0; i < sarifModelArray.size(); i++) {
+
+
             findBugsParser.addFiles(files, sarifModelArray.get(i).sourcePath);
 
             findBugsParser.addLogicalLocations(logicalLocations, sarifModelArray.get(i).getClassName(), sarifModelArray.get(i).getMethodName());
 
-            String ruleId = findBugsParser.getRuleId(sarifModelArray.get(i).getMessage());
-
+            String ruleId = findBugsParser.getRuleId();
+            ruleId = ruleId+ruleIdExtend ;
+            ruleIdExtend++;
             findBugsParser.addRules(ruleObj, ruleId, sarifModelArray.get(i).getMessage());
 
             findBugsParser.addResults(results, ruleId, sarifModelArray.get(i).getMessage(), sarifModelArray.get(i).getStartLine(), sarifModelArray.get(i).getSourcePath());
