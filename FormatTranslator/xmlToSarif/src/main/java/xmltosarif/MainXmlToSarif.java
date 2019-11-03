@@ -1,6 +1,7 @@
 package xmltosarif;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainXmlToSarif {
 
@@ -22,6 +23,11 @@ public class MainXmlToSarif {
         CheckmarxParser checkmarxParser = new CheckmarxParser();
         String checkMarxString = checkmarxParser.generateCheckmarxSarif(checkMarxModel, checkmarxParser);
         checkmarxParser.writeDataToFileCheckMarx(checkMarxString);
+
+        ParseWarnings parseWarnings = new ParseWarnings();
+        List<String> fileNames = parseWarnings.getFileNames();
+        parseWarnings.parseWarnings(fileNames);
+
 
     }
 }
